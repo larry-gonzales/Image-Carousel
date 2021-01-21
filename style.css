@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+.carousel-item,
+.carousel-item-hidden {
+    display: none;
+}
+
+.carousel-item-visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+img {
+    display: block;
+    width: 100%;
+    max-width: 62.5rem;
+    height: auto;
+}
+
+.carousel .carousel-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Arrow button controls */
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: #fff;
+    border-radius: 50%;
+    border-style: none;
+    opacity: 0.6;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn-left {
+    margin-left: 1.25rem;
+}
+
+.btn-right {
+    margin-right: 1.25rem;
+}
+
+/* Arrow direction styles */
+.arrow {
+    width: 0.938rem;
+    height: 0.938rem;
+    box-shadow: -0.125rem 0.125rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.arrow-left {
+    transform: rotate(45deg);
+    margin-left: 0.75rem;
+}
+
+.arrow-right {
+    transform: rotate(225deg);
+    margin-right: 0.75rem;
+}
+
+/* Slide transition animation */
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
